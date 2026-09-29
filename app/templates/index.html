@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cybersecurity Monitoring Agent</title>
+
+<link rel="stylesheet" href="/static/style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- ==========================================
+     Header
+=========================================== -->
+
+<header>
+
+    <div class="logo">
+        🛡️ Cybersecurity Monitoring Agent
+    </div>
+
+    <div class="status">
+        ● System Online
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <!-- ==========================================
+         Dashboard Header
+    =========================================== -->
+
+    <section class="dashboard-header">
+
+        <h1>Security Dashboard</h1>
+
+        <p>
+            Monitor security events and detect suspicious activity.
+        </p>
+
+    </section>
+
+
+    <!-- ==========================================
+         Statistics
+    =========================================== -->
+
+    <section class="stats">
+
+
+        <div class="card">
+
+            <h3>Total Events</h3>
+
+            <p id="total-events">0</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Alerts</h3>
+
+            <p id="total-alerts">0</p>
+
+        </div>
+
+
+        <div class="card critical">
+
+            <h3>Critical Alerts</h3>
+
+            <p id="critical-alerts">0</p>
+
+        </div>
+
+
+        <div class="card high">
+
+            <h3>High Alerts</h3>
+
+            <p id="high-alerts">0</p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ==========================================
+         Analyze Security Event
+    =========================================== -->
+
+    <section class="panel">
+
+        <h2>🔍 Analyze Security Event</h2>
+
+
+        <form id="analyze-form">
+
+
+            <div class="form-grid">
+
+
+                <!-- Event Type -->
+
+                <div>
+
+                    <label for="event_type">
+                        Event Type
+                    </label>
+
+                    <input
+                        type="text"
+                        id="event_type"
+                        placeholder="Example: login_failed"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Username -->
+
+                <div>
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Example: admin"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- IP Address -->
+
+                <div>
+
+                    <label for="ip_address">
+                        IP Address
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ip_address"
+                        placeholder="Example: 10.0.0.50"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Security Message -->
+
+                <div>
+
+                    <label for="message">
+                        Security Message
+                    </label>
+
+                    <input
+                        type="text"
+                        id="message"
+                        placeholder="Describe the security event"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <button type="submit">
+                Analyze Event
+            </button>
+
+
+        </form>
+
+
+    </section>
+
+
+    <!-- ==========================================
+         Analysis Result
+    =========================================== -->
+
+    <section class="panel">
+
+
+        <h2>📊 Analysis Result</h2>
+
+
+        <div id="analysis-result">
+
+            <p>
+                Submit a security event to see the analysis.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ==========================================
+         Recent Security Alerts
+    =========================================== -->
+
+    <section class="panel">
+
+
+        <h2>🚨 Recent Security Alerts</h2>
+
+
+        <div class="table-container">
+
+
+            <table>
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Risk</th>
+
+                        <th>Threat</th>
+
+                        <th>Reason</th>
+
+                        <th>Time</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="alerts-table">
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ==========================================
+         All Security Events
+    =========================================== -->
+
+    <section class="panel">
+
+
+        <h2>📋 All Security Events</h2>
+
+
+        <div class="table-container">
+
+
+            <table>
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Event Type</th>
+
+                        <th>Username</th>
+
+                        <th>IP Address</th>
+
+                        <th>Message</th>
+
+                        <th>Time</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="events-table">
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<!-- ==========================================
+     JavaScript
+=========================================== -->
+
+<script src="/static/script.js"></script>
+```
+
+</body>
+
+</html>
